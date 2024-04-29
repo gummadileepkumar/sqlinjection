@@ -14,46 +14,34 @@ To exploit SQL Injection vulnerability using Multidae web application in Metaspl
 SQL Injection is a sort of infusion assault that makes it conceivable to execute malicious SQL statements. These statements control a database server behind a web application. Assailants can utilize SQL Injection vulnerabilities to sidestep application safety efforts. They can circumvent authentication and authorization of a page or web application and recover the content of the whole SQL database. 
 Identify IP address using ifconfig in Metasploitable2
 
-![ethical_8 1](https://github.com/gummadileepkumar/sqlinjection/assets/118707761/3ee71089-307e-4e49-938b-e68c3975d07e)
-
+![Screenshot 2023-06-10 213824](https://github.com/praveenst13/sqlinjection/assets/118787793/4c83fc80-0108-44d7-92b8-b6292ec99686)
 
 Use the above ip address to access the apache webserver of Metasploitable2 from kali linux. In Kali Linux use the ip address in a web browser.
-
-![ethical_8 2](https://github.com/gummadileepkumar/sqlinjection/assets/118707761/3ae8ec04-99c7-4eab-81de-c1e37df0887e)
-
+![Screenshot 2023-06-10 213747](https://github.com/praveenst13/sqlinjection/assets/118787793/81aa3c6a-fd5d-4b8f-8656-b921cd05e1f4)
 Select Multidae from the menu listed as shown above. You will get the page as displayed below:
 
-![ethical_8 3](https://github.com/gummadileepkumar/sqlinjection/assets/118707761/c26355b3-a581-4962-b9a2-2b4629fef3ac)
-
-
+![Screenshot 2023-06-10 213925](https://github.com/praveenst13/sqlinjection/assets/118787793/65d72597-0297-485a-8c57-d335bf885ba6)
 Click on the menu Login/Register and register for an account
 
 
-![ethical_8 4](https://github.com/gummadileepkumar/sqlinjection/assets/118707761/301289ed-ac52-46bf-beed-4200e99f29a5)
-
+![Screenshot 2023-06-10 214003](https://github.com/praveenst13/sqlinjection/assets/118787793/dfe4513c-3c0d-43e0-b1e4-ad4baee43b98)
 
 Click on the link “Please register here”
-
-![ethical_8 5](https://github.com/gummadileepkumar/sqlinjection/assets/118707761/73037e8a-100d-49ef-b5e8-a6607de8ae5e)
-
+![Screenshot 2023-06-10 214117](https://github.com/praveenst13/sqlinjection/assets/118787793/abd46fae-74a4-48e7-9f95-8eb1470cfe3c)
 
 Click on “Create Account” to display the following page:
-![ethical_8 6](https://github.com/gummadileepkumar/sqlinjection/assets/118707761/52e85154-0193-4c47-afaa-196492f5b4b2)
-
-
+![Screenshot 2023-06-10 214903](https://github.com/praveenst13/sqlinjection/assets/118787793/499aca4d-391b-4f0e-ac33-31ace3337955)
 The login structure we will use in our examples is straightforward. It contains two input fields (username and password), which are both vulnerable. The back-end content creates a query to approve the username and secret key given by the client. Here is an outline of the page rationale:
 
 ($query = “SELECT * FROM users WHERE username=’$_POST[username]’ AND password=’$_POST[password]’“;).
  For the username put “ganesh” or “anything” and for the password put (anything’ or ‘1’=’1) or (admin’ or ‘1’=’1) then try to log in, and you’ll be presented with an admin login page.
 
 
-![ethical_8 7](https://github.com/gummadileepkumar/sqlinjection/assets/118707761/4f487b52-3fe4-4f51-86a4-3d4f48b6f0c4)
-
+![Screenshot 2023-06-10 223438](https://github.com/praveenst13/sqlinjection/assets/118787793/8ae683e6-f569-42f3-9c38-82bc3f9e6f41)
 
 Click “Login”. The logged in page will show as below:
+![Screenshot 2023-06-10 223535](https://github.com/praveenst13/sqlinjection/assets/118787793/037084b7-47fb-40ac-85cc-43f91dde84b5)
 
-
-![ethical_8 8](https://github.com/gummadileepkumar/sqlinjection/assets/118707761/d0d40622-e02f-42f2-9d05-56128448b7e1)
 
 
 ##Bypassing login field
@@ -62,11 +50,10 @@ The username field is vulnerable. Put (ganesh’ #) or (ganesh’--) in the user
 
 Now after logging out you will see the login page. In the login page give ganesh’ # . You can see the page now enters into the administrator page as before when giving the password. 
 
-![ethical_8 9](https://github.com/gummadileepkumar/sqlinjection/assets/118707761/b1445bbc-17e0-4ee1-b4d5-e4bd4dd61374)
-
+![Screenshot 2023-06-10 223645](https://github.com/praveenst13/sqlinjection/assets/118787793/cb326fd0-509f-4df9-b97d-8a65bf1f0716)
 
 Click the login button and you will see it enter into the administrator page.
-![ethical_8 10](https://github.com/gummadileepkumar/sqlinjection/assets/118707761/4b1c7d80-1428-43f6-8784-78d0d958b90d)
+![Screenshot 2023-06-10 223656](https://github.com/praveenst13/sqlinjection/assets/118787793/ac33b189-494b-4a5f-bce2-b840ab35e5fc)
 
 
 ## Union-based SQL injection
@@ -74,26 +61,19 @@ UNION-based SQL injection assaults enable the analyzer to extract data from the 
 we will be using the “User Info” page from Mutillidae to perform a Union-Based SQL injection attack. Go to “OWASP Top 10/A1 — Injection/SQLi — Extract-Data/User Info” 
 
 After logging out, Now choose the menu as shown below:
-![ethical_8 11](https://github.com/gummadileepkumar/sqlinjection/assets/118707761/9a45f8cd-746d-4cbc-9d67-47652a508da7)
-
-![ethical_8 12](https://github.com/gummadileepkumar/sqlinjection/assets/118707761/dc900064-6d4d-44f3-8360-f36c73550212)
-
+![img](Screenshot_2023-06-10_13_13_23.png)
+![Screenshot 2023-06-10 224221](https://github.com/praveenst13/sqlinjection/assets/118787793/123993df-2a2b-455f-abde-8904a72314dd)
 
 
+![Screenshot 2023-06-10 224420](https://github.com/praveenst13/sqlinjection/assets/118787793/9b365f7e-d511-4ff4-a5fb-d33ee779cb86)
 
-![ethical_8 13](https://github.com/gummadileepkumar/sqlinjection/assets/118707761/f74a6960-4b88-40e4-b410-183b182ff299)
+![Screenshot 2023-06-10 224452](https://github.com/praveenst13/sqlinjection/assets/118787793/7b70cf08-aa04-4ba1-b7e5-12f048c98c57)
 
-![ethical_8 14](https://github.com/gummadileepkumar/sqlinjection/assets/118707761/7082b519-9a89-4f7b-b56b-15f034f4e108)
+![Screenshot 2023-06-10 224520](https://github.com/praveenst13/sqlinjection/assets/118787793/713a7087-4c4a-49a0-8c23-92af437df4b1)
 
-
-![ethical_8 15](https://github.com/gummadileepkumar/sqlinjection/assets/118707761/540e25f4-2e1b-43bf-b95e-b07b945cdf7d)
-
-
-![ethical_8 16](https://github.com/gummadileepkumar/sqlinjection/assets/118707761/daa80094-52df-4464-adfd-230f23112b5e)
-
+![Screenshot 2023-06-10 224530](https://github.com/praveenst13/sqlinjection/assets/118787793/a242176f-df4f-4eb2-8296-0671fd7d7264)
 From this point, all our attack vectors will be performed in the URL section of the page using the Union-Based technique.There are two different ways to discover how many columns are selected by the original query. The first is to infuse an “ORDER BY” statement indicating a column number. Given the column number specified is higher than the number of columns in the “SELECT” statement, an error will be returned.
-
-![ethical_8 17](https://github.com/gummadileepkumar/sqlinjection/assets/118707761/a5a4d10e-de57-42a9-8409-de406d712f44)
+![Screenshot 2023-06-10 224702](https://github.com/praveenst13/sqlinjection/assets/118787793/10c8f015-3770-46b5-b320-bf37cc7bbdae)
 
 
 Since we do not know the number of columns, we start at 1. To find the exact amount of columns, the number is incremented until an error related to the “ORDER BY” clause is returned. In this example, we incremented it to 6 and received an error message, so it means that the number of columns is lower than 6.
@@ -103,25 +83,21 @@ The browser url of this info page need to be modified with the url as below:
 http://192.168.43.145/mutillidae/index.php?page=user-info.php&username=praveen%27order%20by%206%23&password=&user-info-php-submit-button=View+Account+Details
 
 
-![ethical_8 18](https://github.com/gummadileepkumar/sqlinjection/assets/118707761/313f22f6-634b-4b90-9585-8df9b7c1f061)
-
+![Screenshot 2023-06-10 224839](https://github.com/praveenst13/sqlinjection/assets/118787793/0eb340b9-63a6-433e-878b-45f3b396f1a2)
 
 After adding the order by 6 into the existing url , the following error statement will be obtained:
-
-![ethical_8 19](https://github.com/gummadileepkumar/sqlinjection/assets/118707761/82b6b1ce-9d28-4932-9f22-e7f915203fbb)
+![Screenshot 2023-06-10 224839](https://github.com/praveenst13/sqlinjection/assets/118787793/0eb340b9-63a6-433e-878b-45f3b396f1a2)
 
 
 
 When we ordered by 5, it worked and displayed some information. It means there are five columns that we can work with. Following screenshot shows that the url modified to have statement added with ordered by 5 replacing 6.
-
-![ethical_8 20](https://github.com/gummadileepkumar/sqlinjection/assets/118707761/46977e9c-dd3b-42f3-ad87-4f42eed4df44)
+![Screenshot 2023-06-10 224928](https://github.com/praveenst13/sqlinjection/assets/118787793/86073e2f-937b-47a4-9b9d-c0c2863b2a7c)
 
 
  As it is having 5 columns the query worked fine and it provides the correct result
 
 
-![ethical_8 21](https://github.com/gummadileepkumar/sqlinjection/assets/118707761/fedbcb5f-c554-40bd-b725-fd8d932ae92e)
-
+![Screenshot 2023-06-10 224939](https://github.com/praveenst13/sqlinjection/assets/118787793/7a660480-5cb6-4d86-acd1-08f7a4d5e2fa)
 
 
 Instead of using the "order by" option, let’s use the "union select" option and provide all five columns. Ex: (union select 1,2,3,4,5)
